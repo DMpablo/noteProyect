@@ -1,0 +1,19 @@
+@import "../../styles/variables";
+
+.home {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: 100vh;
+  .aside {
+    border-right: 1px solid $color-gray;
+    padding: $space-m;
+    height: 100%;
+    .logo {
+      font-family: $font-family;
+      font-weight: 700;
+      margin: $space-m 0 $space-xxl;
+    }
+  }
+  
+}

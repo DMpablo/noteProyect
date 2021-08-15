@@ -1,0 +1,86 @@
+@import './variables.scss';
+
+body{
+    -moz-osx-font-smooting:grayscale;
+    -webkit-font-smoothing:antialiased;
+    font-family: $font-family;
+    overscroll-behavior: none;
+    height: 100vh;
+}
+
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    display: block;
+    font-family: $font-family;
+    text-decoration: none;
+    text-align: center;
+}
+
+a,
+button{
+    cursor: pointer;
+}
+
+input{
+    padding: 0;
+}
+
+
+span,
+button,
+input,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+font-family: $font-family;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+user-select: none;
+}
+
+
+
+pre,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+button{
+    margin: 0;
+    padding: 0;
+}
+
+
+ul,
+li{
+    list-style: none;
+}
+
+button{
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+}

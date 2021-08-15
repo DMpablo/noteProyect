@@ -1,0 +1,79 @@
+@import "../../styles/variables";
+
+.container {
+  /* border: 2px solid black; */
+  height: 95vh;
+ 
+  h2 {
+    color: $color-black;
+    margin: $space-s;
+    font-size: xx-large;
+  }
+  .containerCards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    .deleteNote {
+      color: $color-white;
+      visibility: hidden;
+      border-radius: $border-radius;
+      height: $space-m;
+      width: $space-m;
+      margin-right: -$space-m;
+      border: 2px solid $color-white;
+      position: relative;
+      top:20px; 
+     
+    }
+
+    .card {
+      min-height: $space-xxxl;
+      min-width: $space-xxxl;
+      border-radius: $space-m;
+      margin: $space-s;
+      padding: $space-m;
+      text-align: center;
+      color: $color-white;
+      font-size: $space-m;
+    }
+    .card:hover {
+      cursor: pointer;
+      box-shadow: $box-shadow;
+      border: 2px solid $color-white;
+    }
+    .cardTrue {
+      transition: 0.3s;
+      min-height: 80%;
+      min-width: 60%;
+      border-radius: $space-m;
+      text-align: center;
+      color: $color-white;
+      font-size: $space-s;
+    }
+    .cyan {
+      background-color: $color-cyan;
+    }
+
+    .green {
+      background-color: $color-green;
+    }
+
+    .orange {
+      background-color: $color-orange;
+    }
+
+    .yelow {
+      background-color: $color-yelow;
+    }
+
+    .purple {
+      background-color: $color-purple;
+    }
+  }
+}
+.containerCard:hover {
+  .deleteNote {
+    visibility: visible;
+  }
+}
