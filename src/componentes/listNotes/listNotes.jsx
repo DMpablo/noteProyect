@@ -1,23 +1,17 @@
-import { useState } from "react";
+//import { useState } from "react";
 import styles from "./listNotes.module.scss";
 
-export const ListNotes = ({ notes, deleteNote }) => {
-  const [text, setText] = useState("");
+export const ListNotes = ({ notes, deleteNote, handleText}) => {
 
-  const handleText = (e) => {
-    const value = e.target.value;
-    setText(value);
-    console.log(text);
-  };
   return (
     <div className={`${styles.container}`}>
       <h2>Notes</h2>
 
       <div className={`${styles.containerCards}`}>
-        {notes.map((note, idx) => (
+        {notes.map((e, idx) => (
           <div className={`${styles.containerCard}`}>
             <button
-              className={`${styles[note]} ${styles.deleteNote}`}
+              className={`${styles[e]} ${styles.deleteNote}`}
               onClick={() => deleteNote(idx)}
             >
               X
@@ -27,7 +21,7 @@ export const ListNotes = ({ notes, deleteNote }) => {
                 rows="auto"
                 cols="auto"
                 placeholder="escribe una nota"
-                className={`${styles[note]} ${styles.card}`}
+                className={`${styles[e]} ${styles.card}`}
                 onChange={handleText}
               ></textarea>
             </div>
