@@ -1,19 +1,5 @@
 @import "../../styles/variables";
 
-.container {
-  /* border: 2px solid black; */
-  height: 95vh;
- 
-  h2 {
-    color: $color-black;
-    margin: $space-s;
-    font-size: xx-large;
-  }
-  .containerCards {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
     .deleteNote {
       color: $color-white;
       visibility: hidden;
@@ -24,8 +10,19 @@
       border: 2px solid $color-white;
       position: relative;
       top:20px; 
-     
     }
+    .deleteNote {
+      color: $color-white;
+      visibility: hidden;
+      border-radius: $border-radius;
+      height: $space-l;
+      width: $space-l;
+      margin-right: -$space-m;
+      border: 2px solid $color-white;
+      position: relative;
+      bottom:20px; 
+    }
+
 
     .card {
       min-height: $space-xxxl;
@@ -70,8 +67,7 @@
     .purple {
       background-color: $color-purple;
     }
-  }
-}
+
 .containerCard:hover {
   .deleteNote {
     visibility: visible;

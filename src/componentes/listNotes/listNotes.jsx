@@ -1,18 +1,22 @@
-//import { useState } from "react";
+import { useContext } from "react";
+import { FunctionsContext } from "../../context/functionContext";
+import { NewNotes } from "../newNote/newNote";
 import styles from "./listNotes.module.scss";
+export const ListNotes = () => { 
 
-export const ListNotes = ({ notes, deleteNote, handleText}) => {
+  const {notes, newNote, deleteNote, editNote, createNote } = useContext(FunctionsContext)
+
 
   return (
     <div className={`${styles.container}`}>
       <h2>Notes</h2>
-
       <div className={`${styles.containerCards}`}>
-        {notes.map((e, idx) => (
-          <div className={`${styles.containerCard}`}>
+       <NewNotes newNote={newNote} editNote={editNote} createNote={createNote}/> 
+        {notes.map((e) => (
+          <div key={e.id} className={`${styles.containerCard}`}>
             <button
-              className={`${styles[e]} ${styles.deleteNote}`}
-              onClick={() => deleteNote(idx)}
+              className={`${styles[e.color]} ${styles.deleteNote}`}
+              onClick={() => deleteNote(e.id)}
             >
               X
             </button>
@@ -20,9 +24,9 @@ export const ListNotes = ({ notes, deleteNote, handleText}) => {
               <textarea
                 rows="auto"
                 cols="auto"
-                placeholder="escribe una nota"
-                className={`${styles[e]} ${styles.card}`}
-                onChange={handleText}
+                placeholder={e.text}
+                className={`${styles[e.color]} ${styles.card}`}
+                //onChange={({target}) => handleText(e.id, target.value, e.color)}
               ></textarea>
             </div>
           </div>

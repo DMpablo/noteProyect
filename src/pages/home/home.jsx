@@ -5,19 +5,8 @@ import { FunctionsContext } from "../../context/functionContext";
 import styles from "./home.module.scss";
 
 export const Home = () => {
-  const {handleColorButton, notes, deleteNote} = useContext(FunctionsContext)
- // const [notes, setNote] = useState([]);
-
-  const handleText = (e) => {
-    const value = e.target.value;
-    console.log(value)
-    //setNote([...notes,{ id: 0, color: "", text: value }] );
-  };
-
-   
-
-
-
+  const {handleColorButton} = useContext(FunctionsContext)
+ 
   return (
     <main className={styles.home}>
       <aside className={styles.aside}>
@@ -26,11 +15,7 @@ export const Home = () => {
       </aside>
 
       <section>
-        <ListNotes
-          notes={notes}
-          deleteNote={deleteNote}
-          handleText={handleText}
-        />
+        <ListNotes />
       </section>
     </main>
   );

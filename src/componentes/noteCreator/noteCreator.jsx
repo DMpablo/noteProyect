@@ -15,7 +15,7 @@ export const NoteCreator = ({ onColorButton }) => {
         +
       </button>
       {showColors &&
-        COLORS.map((color) => (
+        COLORS.map((color, idx) => (
           <ColorButton
             key={color}
             color={color}
