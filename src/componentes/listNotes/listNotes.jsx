@@ -4,13 +4,15 @@ import { NewNotes } from "../newNote/newNote";
 import styles from "./listNotes.module.scss";
 export const ListNotes = () => { 
 
-  const {notes, newNote, deleteNote, editNote, createNote } = useContext(FunctionsContext)
+  const {notes, newNote, deleteNote, editNote, createNote , cancelNewNote} = useContext(FunctionsContext)
 
   return (
     <div className={`${styles.container}`}>
       <h2>Notes</h2>
       <div className={`${styles.containerCards}`}>
-       <NewNotes newNote={newNote} editNote={editNote} createNote={createNote}/> 
+       
+       <NewNotes newNote={newNote} editNote={editNote} createNote={createNote} cancelNewNote={cancelNewNote}/> 
+
         { notes.length >= 0 ? (notes.map((e) => (
           <div key={e.id} className={`${styles.containerCard}`}>
             <button

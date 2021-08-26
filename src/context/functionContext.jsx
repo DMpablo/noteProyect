@@ -33,6 +33,11 @@ export const FunctionProvider = ({ children }) => {
     console.log(notes);
 }
 
+ const cancelNewNote = () =>{
+  setNewNote({})
+ }
+
+
   return (
     <FunctionsContext.Provider
       value={{
@@ -43,7 +48,8 @@ export const FunctionProvider = ({ children }) => {
         setNote,
         newNote,
         editNote,
-        createNote
+        createNote,
+        cancelNewNote
       }}
     >
       {children}

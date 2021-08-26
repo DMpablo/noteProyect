@@ -1,13 +1,13 @@
 import styles from "./newNotes.module.scss";
 
-export const NewNotes = ({newNote, editNote, createNote}) => {
+export const NewNotes = ({newNote, editNote, createNote,cancelNewNote}) => {
 
   return (
      
          newNote.color !== undefined ? ( <div className={`${styles.containerCard}`}>
             <button
               className={`${styles[newNote.color]} ${styles.deleteNote}`}
-              //onClick={() => deleteNote(idx)}
+              onClick={() => cancelNewNote()}
             >
               Cancelar
             </button>
