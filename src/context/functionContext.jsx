@@ -7,7 +7,7 @@ export const FunctionProvider = ({ children }) => {
   const [newNote, setNewNote] = useState({});
 
   const handleColorButton = (color) => {
-    setNewNote({color: color}) 
+    setNewNote({id: 0, color: color, text:"" }) 
   };
 
   const handleText =  (id, value, color) => {
@@ -21,15 +21,16 @@ export const FunctionProvider = ({ children }) => {
   }
 
   const deleteNote = (idx) => {
-    let newNotes = notes;
-    newNotes.splice(idx, 1);
-    setNote(newNotes);
+    const result = notes.filter((e) => e.id !== idx);
+    //result.splice(idx, 1);
+    setNote(result);
   };
-
   
-const createNote = (newNote)=>{
-  setNote([...notes, newNote])
-  setNewNote({})
+  
+  const createNote = (n)=>{
+    setNote([...notes,{ id: notes.length +1,color : n.color, text: n.text  }])
+    setNewNote({})
+    console.log(notes);
 }
 
   return (

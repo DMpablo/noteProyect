@@ -6,13 +6,12 @@ export const ListNotes = () => {
 
   const {notes, newNote, deleteNote, editNote, createNote } = useContext(FunctionsContext)
 
-
   return (
     <div className={`${styles.container}`}>
       <h2>Notes</h2>
       <div className={`${styles.containerCards}`}>
        <NewNotes newNote={newNote} editNote={editNote} createNote={createNote}/> 
-        {notes.map((e) => (
+        { notes.length >= 0 ? (notes.map((e) => (
           <div key={e.id} className={`${styles.containerCard}`}>
             <button
               className={`${styles[e.color]} ${styles.deleteNote}`}
@@ -30,7 +29,10 @@ export const ListNotes = () => {
               ></textarea>
             </div>
           </div>
-        ))}
+        )))
+        :
+        <div>nota nueva</div>
+        }
       </div>
     </div>
   );

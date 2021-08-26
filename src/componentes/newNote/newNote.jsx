@@ -4,7 +4,7 @@ export const NewNotes = ({newNote, editNote, createNote}) => {
 
   return (
      
-          <div className={`${styles.containerCard}`}>
+         newNote.color !== undefined ? ( <div className={`${styles.containerCard}`}>
             <button
               className={`${styles[newNote.color]} ${styles.deleteNote}`}
               //onClick={() => deleteNote(idx)}
@@ -26,6 +26,8 @@ export const NewNotes = ({newNote, editNote, createNote}) => {
               Crear nota
             </button>
             </div>
-          </div>
+          </div>)
+          :
+          ""
   );
 };
