@@ -10,16 +10,18 @@ export const FunctionProvider = ({ children }) => {
     setNewNote({id: 0, color: color, text:"" }) 
   };
 
-  const handleText =  (id, value, color) => {
-   const changeNote =  notes.splice(id, 1, {id: id, color: color, text: value})
-  
-   setNote(...notes, changeNote);
+  const handleText =  (id, color, value ) => {
+   const changeNote =  {id: id, color: color, text: value};
+   setNewNote(changeNote);
   };
   
   const editNote = (color, value)=>{
     setNewNote({color:color, text:value})
   }
 
+  const confirmEdit = (id, color)=>{
+    setNote([...notes , {id: id, c0lor: color, text: newNote.text }])
+  }
   const deleteNote = (idx) => {
     const result = notes.filter((e) => e.id !== idx);
     //result.splice(idx, 1);
@@ -49,7 +51,8 @@ export const FunctionProvider = ({ children }) => {
         newNote,
         editNote,
         createNote,
-        cancelNewNote
+        cancelNewNote,
+        confirmEdit
       }}
     >
       {children}

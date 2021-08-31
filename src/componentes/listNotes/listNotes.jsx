@@ -4,7 +4,7 @@ import { NewNotes } from "../newNote/newNote";
 import styles from "./listNotes.module.scss";
 export const ListNotes = () => { 
 
-  const {notes, newNote, deleteNote, editNote, createNote , cancelNewNote} = useContext(FunctionsContext)
+  const {notes, newNote, deleteNote, editNote, createNote , cancelNewNote,handleText, confirmEdit} = useContext(FunctionsContext)
 
   return (
     <div className={`${styles.container}`}>
@@ -15,20 +15,26 @@ export const ListNotes = () => {
 
         { notes.length >= 0 ? (notes.map((e) => (
           <div key={e.id} className={`${styles.containerCard}`}>
-            <button
+          <button
               className={`${styles[e.color]} ${styles.deleteNote}`}
               onClick={() => deleteNote(e.id)}
             >
               X
             </button>
+            
+            <button
+              className={`${styles[e.color]} ${styles.confirm}`}
+              onClick={() => confirmEdit(e.id, e.color)}
+            >
+              confirmar cambios
+            </button>
             <div>
               <textarea
                 rows="auto"
                 cols="auto"
-                placeholder={e.text}
                 className={`${styles[e.color]} ${styles.card}`}
-                //onChange={({target}) => handleText(e.id, target.value, e.color)}
-              ></textarea>
+                onChange={({target}) => handleText(e.id, e.color, target.value,)}
+              >{e.text}</textarea>
             </div>
           </div>
         )))
