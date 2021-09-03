@@ -26,7 +26,17 @@
       top:20px; 
      
     }
-
+    .confim{
+      color: $color-white;
+      visibility: hidden;
+      border-radius: $border-radius;
+      height: $space-m;
+      width: $space-m;
+      margin-right: -$space-m;
+      border: 2px solid $color-white;
+      position: relative;
+      top:10px; 
+    }
     .card {
       min-height: $space-xxxl;
       min-width: $space-xxxl;

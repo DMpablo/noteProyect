@@ -1,0 +1,53 @@
+@import "../../styles/variables";
+
+.containerCard{
+
+  .deleteNote {
+    visibility: visible;
+      border: 2px solid $color-white;
+      border-radius: 50%;
+      position: relative;
+      height: $space-xl;
+      width: $space-xl;
+      bottom:-290px; 
+      left: 150px;
+      color: $color-black;
+    }
+    .card {
+      min-height: $space-xxxl;
+      min-width: $space-xxxl;
+      border-radius: $space-m;
+      margin: $space-s;
+      padding: $space-m;
+      text-align: center;
+      color: $color-white;
+      font-size: $space-m;
+      :hover {
+        cursor: pointer;
+        box-shadow: $box-shadow;
+        border: 2px solid $color-white;
+        
+      }
+    }
+  }
+    .cyan {
+      background-color: $color-cyan;
+    }
+    
+    .green {
+      background-color: $color-green;
+    }
+
+    .orange {
+      background-color: $color-orange;
+    }
+
+    .yelow {
+      background-color: $color-yelow;
+    }
+
+    .purple {
+      background-color: $color-purple;
+    }
+
+

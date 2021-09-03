@@ -15,12 +15,13 @@ export const NoteCreator = ({ onColorButton }) => {
         +
       </button>
       {showColors &&
-        COLORS.map((color) => (
+        COLORS.map((color, idx) => (
           <ColorButton
-            key={color}
+          //idx = array COLOR.
+            key={idx}
             color={color}
             click={(color) => { onColorButton(color); setShowColors(false)
-            
+            //enviar otro id..
             }}
           />
         ))}
