@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { ListNotes } from "../../componentes/listNotes/listNotes";
 import { NoteCreator } from "../../componentes/noteCreator/noteCreator";
+//import NotesFirebase from "../../componentes/notesFirebase/notesFirebase";
 import { FunctionsContext } from "../../context/functionContext";
 import styles from "./home.module.scss";
 
@@ -16,7 +17,12 @@ export const Home = () => {
 
       <section>
         <ListNotes />
-      </section>
+      </section>   
+      
+     {/*  <section>
+        <NotesFirebase/>
+      </section> */}
+      
     </main>
   );
 };

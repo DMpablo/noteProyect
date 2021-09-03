@@ -4,14 +4,15 @@ export const NewNotes = ({newNote, editNote, createNote,cancelNewNote}) => {
 
   return (
      
-         newNote.color !== undefined ? ( <div className={`${styles.containerCard}`}>
+         newNote.color !== undefined ? ( 
+         <div className={`${styles.containerCard}`}>
             <button
               className={`${styles[newNote.color]} ${styles.deleteNote}`}
               onClick={() => cancelNewNote()}
             >
-              Cancelar
+              Cancel
             </button>
-            <div>
+            <div> 
               <textarea
                 rows="auto"
                 cols="auto"
