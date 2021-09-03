@@ -10,7 +10,7 @@
       height: $space-xl;
       width: $space-xl;
       bottom:-290px; 
-      left: 150px;
+      left: 50px;
       color: $color-black;
     }
     .card {
@@ -28,6 +28,16 @@
         border: 2px solid $color-white;
         
       }
+    }
+    .createNote{
+      border: 2px solid $color-white;
+      font-size: $space-m;
+      border-radius: 50%;
+      position: relative;
+      height: $space-xl;
+      width: $space-xl;
+      bottom:16px; 
+      left: -115px;
     }
   }
     .cyan {

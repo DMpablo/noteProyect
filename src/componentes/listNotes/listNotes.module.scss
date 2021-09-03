@@ -26,16 +26,15 @@
       top:20px; 
      
     }
-    .confim{
-      color: $color-white;
-      visibility: hidden;
-      border-radius: $border-radius;
-      height: $space-m;
-      width: $space-m;
-      margin-right: -$space-m;
+    .confirmChanges{
       border: 2px solid $color-white;
+      font-size: $space-s;
+      border-radius: 50%;
       position: relative;
-      top:10px; 
+      height: $space-xl;
+      width: $space-xl;
+      bottom:-32px; 
+      left: 150px;
     }
     .card {
       min-height: $space-xxxl;

@@ -21,10 +21,10 @@ export const NewNotes = ({newNote, editNote, createNote,cancelNewNote}) => {
                 onChange={({target}) => editNote( newNote.color, target.value )}
               ></textarea>
               <button
-              className={`${styles[newNote.color]} ${styles.CreateNote}`}
+              className={`${styles[newNote.color]} ${styles.createNote}`}
               onClick={() => createNote(newNote)}
               >
-              Crear nota
+              +
             </button>
             </div>
           </div>)
