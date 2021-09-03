@@ -1,18 +1,6 @@
 @import "../../styles/variables";
 
 .containerCard{
-
-  .deleteNote {
-    visibility: visible;
-      border: 2px solid $color-white;
-      border-radius: 50%;
-      position: relative;
-      height: $space-xl;
-      width: $space-xl;
-      bottom:-290px; 
-      left: 150px;
-      color: $color-black;
-    }
     .card {
       min-height: $space-xxxl;
       min-width: $space-xxxl;
@@ -28,6 +16,28 @@
         border: 2px solid $color-white;
         
       }
+    }
+    .deleteNote {
+      visibility: visible;
+        border: 2px solid $color-white;
+        border-radius: 50%;
+        height: $space-xl;
+        width: $space-xl;
+        position: relative;
+        bottom:16px; 
+        left: -20%;
+        color: $color-black;
+    }
+    .createNote{
+      border: 2px solid $color-white;
+      font-size: $space-m;
+      border-radius: 50%;
+      height: $space-xl;
+      width: $space-xl;
+      position: relative;
+      bottom:16px; 
+      left: -80%;
+      color: $color-black;
     }
   }
     .cyan {

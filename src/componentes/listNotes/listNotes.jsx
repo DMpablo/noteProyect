@@ -28,7 +28,7 @@ export const ListNotes = () => {
 
         { notes.length >= 0 ? (notes.map((e) => (
           <form key={e.id} className={`${styles.containerCard}`} onSubmit={enviarDatos}>
-          <button
+            <button
               className={`${styles[e.color]} ${styles.deleteNote}`}
               onClick={() => deleteNote(e.id)}
             >
@@ -38,10 +38,10 @@ export const ListNotes = () => {
               change.state && change.id === e.id? (
               <button
               type="submit"
-              className={`${styles[e.color]} ${styles.confirm}`}
+              className={`${styles[e.color]} ${styles.confirmChanges}`}
               onClick={() => setChange({id: e.id, state: false})}
             >
-              confirmar cambios
+              confirm 
             </button>): ("")
             }
             <div>
