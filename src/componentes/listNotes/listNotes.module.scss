@@ -3,11 +3,12 @@
 .container {
   /* border: 2px solid black; */
   height: 95vh;
- 
+  width: auto;
   h2 {
+    text-align: center;
+    font-size: $space-m;
     color: $color-black;
     margin: $space-s;
-    font-size: xx-large;
   }
   .containerCards {
     display: flex;
@@ -23,8 +24,7 @@
       margin-right: -$space-m;
       border: 2px solid $color-white;
       position: relative;
-      top:20px; 
-     
+      top:20px;      
     }
     .confirmChanges{
       border: 2px solid $color-white;
@@ -78,6 +78,11 @@
 
     .purple {
       background-color: $color-purple;
+    }
+    :hover{
+      .deleteNote{
+        visibility: visible;
+      }
     }
   }
 }

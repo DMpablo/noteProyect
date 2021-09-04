@@ -1,63 +1,59 @@
 @import "../../styles/variables";
 
-.containerCard{
-    .card {
-      min-height: $space-xxxl;
-      min-width: $space-xxxl;
-      border-radius: $space-m;
-      margin: $space-s;
-      padding: $space-m;
-      text-align: center;
-      color: $color-white;
-      font-size: $space-m;
-      :hover {
-        cursor: pointer;
-        box-shadow: $box-shadow;
-        border: 2px solid $color-white;
-        
-      }
-    }
-    .deleteNote {
-      visibility: visible;
-        border: 2px solid $color-white;
-        border-radius: 50%;
-        height: $space-xl;
-        width: $space-xl;
-        position: relative;
-        bottom:16px; 
-        left: -20%;
-        color: $color-black;
-    }
-    .createNote{
+.containerCard {
+  .card {
+    min-height: $space-xxxl;
+    min-width: $space-xxxl;
+    border-radius: $space-m;
+    margin: $space-s;
+    padding: $space-m;
+    text-align: center;
+    color: $color-white;
+    font-size: $space-m;
+    :hover {
+      cursor: pointer;
+      box-shadow: $box-shadow;
       border: 2px solid $color-white;
-      font-size: $space-m;
-      border-radius: 50%;
-      height: $space-xl;
-      width: $space-xl;
-      position: relative;
-      bottom:16px; 
-      left: -80%;
-      color: $color-black;
     }
   }
-    .cyan {
-      background-color: $color-cyan;
-    }
-    
-    .green {
-      background-color: $color-green;
-    }
+  .cancelNote {
+    border: 2px solid $color-white;
+    border-radius: 50%;
+    height: $space-xl;
+    width: $space-xl;
+    position: relative;
+    bottom: 16px;
+    left: -70%;
+    color: $color-black;
+  }
+  .createNote {
+    border: 2px solid $color-white;
+    font-size: $space-m;
+    border-radius: 50%;
+    height: $space-xl;
+    width: $space-xl;
+    position: relative;
+    bottom: 16px;
+    left: -30%;
+    color: $color-black;
+  }
+}
+.cyan {
+  background-color: $color-cyan;
+}
 
-    .orange {
-      background-color: $color-orange;
-    }
+.green {
+  background-color: $color-green;
+}
 
-    .yelow {
-      background-color: $color-yelow;
-    }
+.orange {
+  background-color: $color-orange;
+}
 
-    .purple {
-      background-color: $color-purple;
-    }
+.yelow {
+  background-color: $color-yelow;
+}
 
-
+.purple {
+  background-color: $color-purple;
+}
