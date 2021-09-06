@@ -1,15 +1,14 @@
 @import "../../styles/variables.scss";
 
 .colorButton {
+  margin: $space-s;
   border-radius: 50%;
   height: $space-m;
   width: $space-m;
-  margin-bottom: $space-m;
-  transition: 0.3s;
-}
-.colorButton:hover {
-  box-shadow: $box-shadow;
-  transition: 0.3s;
+  transition: 3s;
+  :hover {
+    box-shadow: $box-shadow;
+  }
 }
 
 .cyan {

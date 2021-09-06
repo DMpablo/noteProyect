@@ -18,13 +18,11 @@ export const FunctionProvider = ({ children }) => {
   const confirmEdit = (e)=>{
    const dataArr = new Set(notes)
    let result = [...dataArr];
-   console.log(result);
    setNote(result)
   }
 
   const deleteNote = (idx) => {
     const result = notes.filter((e) => e.id !== idx);
-    //result.splice(idx, 1);
     setNote(result);
   };
   
@@ -32,7 +30,6 @@ export const FunctionProvider = ({ children }) => {
   const createNote = (n)=>{
     setNote([...notes,{ id: notes.length +1,color : n.color, text: n.text  }])
     setNewNote({})
-    console.log(notes);
   }
 
   const cancelNewNote = () =>{

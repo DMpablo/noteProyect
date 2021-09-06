@@ -14,17 +14,18 @@ export const NoteCreator = ({ onColorButton }) => {
       >
         +
       </button>
-      {showColors &&
-        COLORS.map((color, idx) => (
-          <ColorButton
-          //idx = array COLOR.
-            key={idx}
-            color={color}
-            click={(color) => { onColorButton(color); setShowColors(false)
-            //enviar otro id..
-            }}
-          />
-        ))}
+      <div className={styles.containerColors}>
+        {showColors &&
+          COLORS.map((color, idx) => (
+            <ColorButton
+              key={idx}
+              color={color}
+              click={(color) => {
+                onColorButton(color);
+                setShowColors(false);
+              }}/>
+          ))}
+      </div>
     </div>
   );
 };

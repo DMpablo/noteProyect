@@ -11,7 +11,7 @@ export const Home = () => {
   return (
     <main className={styles.home}>
       <aside className={styles.aside}>
-        <p className={styles.logo}>Docket</p>
+        <p className={styles.logo}>Notes</p>
         <NoteCreator onColorButton={handleColorButton} />
       </aside>
 

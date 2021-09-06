@@ -1,26 +1,22 @@
 @import "../../styles/variables.scss";
 
 .noteCreator {
-  align-items: center;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  margin-left: $space-s;
+
   .plusButton {
-    background-color: $color-black;
-    border-radius: 50%;
-    color: $color-white;
-    height: $space-l;
-    margin-bottom: $space-l;
-    width: $space-l;
-    font-size:  $space-l;  
+    background-color: $color-white;
+    color: $color-black;
+    font-size: $space-l;
     transition: 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-right: $space-s;
   }
   .plusButton:hover {
-    font-size:  $space-l;
+    font-size: $space-l;
     transform: rotate(-90deg);
     transition: 0.3s;
+  }
+  @media (max-width: 425px) {
+    display: block;
   }
 }
