@@ -1,5 +1,17 @@
 # Getting Started with Create React App
 
+
+<!--   
+
+ comandos para hacer deploy    
+
+   1- npm run deploy    // genera cambios en carpeta ./build
+   2- npm run build     // corre ./build
+   3- commit y push en Git  // actualiza GitHub
+   4- firebase deploy   // Genera los cambios en Firebase hosting
+
+-->
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
